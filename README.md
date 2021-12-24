@@ -14,6 +14,8 @@ This application acts as a gateway that gets the weather data from MySQL DB and 
 5. Install a MySQL database client such as [DBeaver](https://dbeaver.io/download/) or [MySQL Workbench](https://dev.mysql.com/downloads/workbench/)
 6. Create the database using the [setup/database.sql](setup/database.sql) script.
 7. Create an IoT Central application. Import [Weather Station](setup/WeatherStation.json) device template into the application.
+8. Setup a new ADX Cluster with a database. Use the [setup/WeatherStation.kql](setup/WeatherStation.kql) file to create a table.
+9. Setup Continuous Data Export (CDE) to the above database and table. Use the (setup/transform.jq)[setup/transform.jq] to transform and insert telemetry data into the table.
 
 
 ## Build and run Application ##
